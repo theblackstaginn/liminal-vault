@@ -481,3 +481,21 @@ body { font-weight: 700; }
 p, li, span, label, input, textarea, small { font-weight: 700; }
 button, .btn, .nav a, .footer-links a { font-weight: 700; }
 .h1, .section h2, .brand .title strong { font-weight: 700; }
+
+/* PNG BUTTON HOVER — ARCHITECTURAL */
+
+.btn-img img,
+.nav .cta.cta-img img{
+  transition:
+    filter 0.18s ease,
+    transform 0.18s ease;
+}
+
+.btn-img:hover img,
+.nav .cta.cta-img:hover img{
+  filter:
+    brightness(1.04)
+    contrast(1.03)
+    saturate(0.98);
+  transform: translateY(-1px);
+}
