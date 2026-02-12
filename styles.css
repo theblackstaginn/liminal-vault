@@ -595,3 +595,80 @@ button, .btn, .nav a, .footer-links a { font-weight: 700; }
   border: 0 !important;
   box-shadow: none !important;
 }
+
+/* ================================
+   MOBILE TIGHTENING PATCH
+   ================================ */
+
+/* 1) FORCE BACKGROUND BEHAVIOR ON MOBILE
+   (simulate fixed without iOS jank) */
+@media (max-width: 768px){
+  body{
+    background-attachment: scroll; /* keep iOS stable */
+    background-position: center top;
+    background-size: auto;
+  }
+
+  /* create visual "fixed" effect */
+  body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url("assets/lvs-mobile-bg.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center top;
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+
+/* 2) TIGHTEN MOBILE HEADER */
+@media (max-width: 768px){
+
+  .site-header{
+    backdrop-filter: blur(8px) saturate(115%);
+  }
+
+  .header-inner{
+    padding: 8px 0;      /* was 14px */
+    gap: 10px;
+  }
+
+  .brand{
+    gap: 8px;
+  }
+
+  .brand img{
+    width: 36px;         /* was 44px */
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .brand .title strong{
+    font-size: 12px;     /* tighter */
+    letter-spacing: 0.06em;
+  }
+
+  .nav{
+    gap: 6px;
+  }
+
+  .nav a{
+    padding: 6px 6px;
+    font-size: 12px;
+  }
+
+  /* PNG CTA in header */
+  .nav .cta.cta-img img{
+    height: 32px;        /* tighter CTA */
+  }
+}
+
+/* 3) OPTIONAL: slightly reduce hero top spacing on mobile */
+@media (max-width: 768px){
+  .main{
+    padding-top: 24px;
+  }
+}
