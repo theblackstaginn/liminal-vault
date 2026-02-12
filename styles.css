@@ -561,3 +561,27 @@ button, .btn, .nav a, .footer-links a { font-weight: 700; }
   border-radius:0 !important;
   background:transparent !important;
 }
+
+/* CARD GHOST OUTLINE NUKER (put at VERY bottom) */
+.card,
+.card *{
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.card{
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* if the ghost outline is actually on the grid wrapper */
+.grid-3{
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
