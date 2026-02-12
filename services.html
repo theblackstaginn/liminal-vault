@@ -1,3 +1,4 @@
+<!-- services.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,14 +9,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Cinzel:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Liminal Vault Studio home">
         <img src="assets/lvs-logo.png" alt="Liminal Vault Studio logo" />
         <div class="title">
           <strong>Liminal Vault Studio</strong>
@@ -28,51 +29,64 @@
         <a href="services.html">Services</a>
         <a href="process.html">Process</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="cta">Request Consultation</a>
+
+        <!-- PNG CTA -->
+        <a href="contact.html" class="cta cta-img" aria-label="Request Consultation">
+          <img src="lvs-btns/req-consult.png" alt="Request Consultation" />
+        </a>
       </nav>
     </div>
   </header>
 
   <main class="main">
     <div class="wrap">
+
       <section class="panel section">
         <h2>Services</h2>
         <p>Studio-first work, fabricated off-site and installed in a single controlled operation whenever possible.</p>
       </section>
 
+      <!-- Cards removed -->
       <section class="panel section">
-        <div class="grid-3">
-          <div class="card">
-            <h3>Inset Architectural Relief</h3>
-            <p>Custom sculptural reliefs fabricated off-site and seated into existing drywall surfaces. Designed to integrate with the wall plane.</p>
-          </div>
-
-          <div class="card">
-            <h3>Sculptural Installations</h3>
-            <p>Larger works designed for interiors where scale and spatial presence are central. Built in sections when required.</p>
-          </div>
-
-          <div class="card">
-            <h3>Relief Panels</h3>
-            <p>Smaller scale or semi-custom works for clients seeking the language of inset relief without a full custom build.</p>
-          </div>
+        <div class="note">
+          <p style="margin:0 0 10px">
+            <strong>Inset Architectural Relief:</strong> Custom sculptural reliefs fabricated off-site and seated into existing drywall surfaces. Designed to integrate with the wall plane.
+          </p>
+          <p style="margin:0 0 10px">
+            <strong>Sculptural Installations:</strong> Larger works designed for interiors where scale and spatial presence are central. Built in sections when required.
+          </p>
+          <p style="margin:0">
+            <strong>Relief Panels:</strong> Smaller scale or semi-custom works for clients seeking the language of inset relief without a full custom build.
+          </p>
         </div>
 
-        <div class="hero-actions" style="margin-top:16px">
-          <a class="btn primary" href="contact.html">Begin a Project</a>
-          <a class="btn" href="work.html">View Work</a>
-          <a class="btn ghost" href="process.html">See the Process</a>
+        <!-- PNG action buttons -->
+        <div class="btn-row" style="margin-top:16px" aria-label="Service actions">
+          <a class="btn-img" href="contact.html" aria-label="Begin a Project">
+            <img src="lvs-btns/begin-project.png" alt="Begin a Project" />
+          </a>
+
+          <a class="btn-img" href="work.html" aria-label="View Work">
+            <img src="lvs-btns/view-work.png" alt="View Work" />
+          </a>
+
+          <a class="btn-img" href="process.html" aria-label="See the Process">
+            <img src="lvs-btns/see-process.png" alt="See the Process" />
+          </a>
         </div>
       </section>
 
+      <!-- Cards removed -->
       <section class="panel section">
         <h2>Installation Parameters</h2>
-        <div class="grid-3">
-          <div class="card"><h3>Decorative</h3><p>All installations are decorative and non-load-bearing.</p></div>
-          <div class="card"><h3>Controlled</h3><p>Fabrication is completed prior to scheduling installation.</p></div>
-          <div class="card"><h3>Respectful</h3><p>No on-site sculpting or heavy material work inside the home.</p></div>
-        </div>
+
+        <ul class="note" style="margin-top:14px">
+          <li><strong>Decorative:</strong> All installations are decorative and non-load-bearing.</li>
+          <li><strong>Controlled:</strong> Fabrication is completed prior to scheduling installation.</li>
+          <li><strong>Respectful:</strong> No on-site sculpting or heavy material work inside the home.</li>
+        </ul>
       </section>
+
     </div>
   </main>
 
