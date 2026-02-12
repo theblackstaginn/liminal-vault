@@ -499,3 +499,84 @@ button, .btn, .nav a, .footer-links a { font-weight: 700; }
     saturate(0.98);
   transform: translateY(-1px);
 }
+
+/* PNG BUTTONS PATCH (lvs-btns folder in root) */
+
+.nav .cta.cta-img{
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+
+.nav .cta.cta-img img{
+  height:38px;
+  width:auto;
+  display:block;
+  box-shadow:none;
+  filter:none;
+  transition: transform 140ms ease, filter 140ms ease, opacity 140ms ease;
+}
+
+.btn-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:14px;
+}
+
+.btn-img{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  border-radius:14px;
+}
+
+.btn-img img{
+  height:38px;
+  width:auto;
+  display:block;
+  box-shadow:none;
+  filter:none;
+  transition: transform 140ms ease, filter 140ms ease, opacity 140ms ease;
+}
+
+/* Hover effects */
+.nav .cta.cta-img:hover img,
+.btn-img:hover img{
+  transform: translateY(-1px);
+  filter: brightness(1.04) contrast(1.02);
+}
+
+/* Active press */
+.nav .cta.cta-img:active img,
+.btn-img:active img{
+  transform: translateY(0px) scale(0.99);
+  filter: brightness(0.98);
+}
+
+@media (max-width: 520px){
+  .nav .cta.cta-img img,
+  .btn-img img{
+    height:34px;
+  }
+}
+
+/* HERO LOGO OUTLINE (index) */
+.hero-logo{
+  max-width:440px;
+  width:100%;
+  margin:0 0 18px;
+  border:1px solid rgba(183, 176, 166, 0.85); /* stone outline */
+  border-radius:18px;
+  padding:12px;
+  background:rgba(255,255,255,0.22);
+}
+
+.hero-logo img{
+  width:100%;
+  height:auto;
+  display:block;
+}
