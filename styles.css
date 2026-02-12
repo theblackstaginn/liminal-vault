@@ -558,3 +558,26 @@ button, .btn, .nav a, .footer-links a { font-weight: 700; }
 @media (max-width: 560px){
   .grid-3{grid-template-columns: 1fr}
 }
+
+/* BUTTON SIZE BUMP (exclude header/nav) */
+
+/* Make content buttons a bit larger */
+.hero-actions .btn,
+.btn-row .btn-img,
+.main .btn{
+  padding:14px 18px;
+  font-size:15px;
+}
+
+/* Make PNG buttons larger (content only) */
+.btn-row .btn-img img{
+  height:44px;
+}
+
+/* Keep header/nav exactly as-is */
+.site-header .btn,
+.site-header .btn-img img,
+.site-header .nav a,
+.site-header .nav .cta.cta-img img{
+  /* no changes */
+}
