@@ -10,7 +10,9 @@
   --paper: rgba(255,255,255,0.28);
   --paper-strong: rgba(255,255,255,0.38);
 
-  --line: rgba(83, 62, 45, 0.10); }
+  /* panel line (very subtle) */
+  --line: rgba(83, 62, 45, 0.10);
+
   --accent:#7a5a3a;
   --accent-2:#a67c52;
 
@@ -147,9 +149,7 @@ img{max-width:100%; height:auto; display:block}
   box-shadow:none;
 }
 
-.nav .cta.cta-img:hover{
-  background:transparent;
-}
+.nav .cta.cta-img:hover{background:transparent}
 
 .nav .cta.cta-img img{
   height:38px;
@@ -178,16 +178,35 @@ img{max-width:100%; height:auto; display:block}
   backdrop-filter: blur(18px) saturate(120%);
 }
 
-/* REMOVE INNER LIGHT RECTANGLES (keep only the glass panel) */
-.panel > *,
-.panel .note,
-.panel ul,
-.panel ul.note,
+/* Kill the old "card" look without breaking layout widths */
 .panel .card,
-.panel .grid-3,
-.panel .figure,
-.panel .hero-media{
-  background: transparent !important;
+.panel .grid-3{
+  background:transparent !important;
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+}
+
+.panel .card{padding:0 !important; margin:0 !important}
+
+/* Remove the lighter inner rectangles (your note blocks) */
+.panel .note,
+.panel ul.note{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  padding:0 !important;
+}
+
+/* Keep list formatting readable */
+.panel ul.note{
+  margin:14px 0 0 !important;
+  padding-left:18px !important;
+}
+
+.panel ul.note li{
+  margin:10px 0 !important;
 }
 
 .hero{padding:22px}
@@ -371,6 +390,7 @@ img{max-width:100%; height:auto; display:block}
   line-height:1.65;
 }
 
+/* note base (kept for other pages if used) */
 .note{
   margin-top:14px;
   padding:14px 16px;
@@ -382,23 +402,10 @@ img{max-width:100%; height:auto; display:block}
   font-size:14px;
 }
 
-/* note lists */
 .note ul{margin:0; padding-left:18px}
 .note li{margin:10px 0}
 .note strong{color:var(--ink)}
-
-/* allow using <ul class="note"> directly */
 ul.note{list-style:disc}
-
-/* Keep list formatting readable inside panels */
-.panel ul.note{
-  margin: 14px 0 0 !important;
-  padding-left: 18px !important;
-}
-
-.panel .note li{
-  margin: 10px 0 !important;
-}
 
 .gallery{
   display:grid;
@@ -422,7 +429,6 @@ ul.note{list-style:disc}
 }
 
 .figure img{width:100%; height:auto}
-
 .figure figcaption{padding:12px 14px 14px}
 
 .figure strong{
@@ -551,37 +557,4 @@ button, .btn, .nav a, .footer-links a { font-weight: 700; }
 
 @media (max-width: 560px){
   .grid-3{grid-template-columns: 1fr}
-}
-
-/* If any legacy .card blocks still exist, make sure they do not render as cards */
-.card{
-  border:0 !important;
-  box-shadow:none !important;
-  padding:0 !important;
-  border-radius:0 !important;
-  background:transparent !important;
-}
-
-/* CARD GHOST OUTLINE NUKER (put at VERY bottom) */
-.card,
-.card *{
-  background: transparent !important;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-}
-
-.card{
-  padding: 0 !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* if the ghost outline is actually on the grid wrapper */
-.grid-3{
-  background: transparent !important;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
 }
