@@ -580,3 +580,22 @@ button, .btn, .nav a, .footer-links a { font-weight: 700; }
   height:auto;
   display:block;
 }
+
+/* REMOVE INNER LIGHT RECTANGLES (keep only the glass panel) */
+.panel .note,
+.panel ul.note{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Keep list formatting readable */
+.panel ul.note{
+  margin: 14px 0 0 !important;
+  padding-left: 18px !important;
+}
+
+.panel .note li{
+  margin: 10px 0 !important;
+}
