@@ -7,17 +7,17 @@
   --ink-soft:#5a4636;
 
   /* ULTRA GLASS (more transparent) */
-  --paper: rgba(255,255,255,0.28);
-  --paper-strong: rgba(255,255,255,0.38);
+  --paper: rgba(255,255,255,0.18);
+  --paper-strong: rgba(255,255,255,0.26);
 
   /* panel line (very subtle) */
-  --line: rgba(83, 62, 45, 0.10);
+  --line: rgba(83, 62, 45, 0.06);
 
   --accent:#7a5a3a;
   --accent-2:#a67c52;
 
   /* lighter, less "cardy" shadow */
-  --shadow: 0 8px 28px rgba(40, 28, 18, 0.10);
+  --shadow: 0 6px 22px rgba(40, 28, 18, 0.08);
 
   --radius:18px;
   --radius-sm:14px;
@@ -175,7 +175,14 @@ img{max-width:100%; height:auto; display:block}
   border:1px solid var(--line);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-  backdrop-filter: blur(18px) saturate(120%);
+  backdrop-filter: blur(22px) saturate(115%);
+}
+
+@media (max-width: 768px){
+  .panel{
+    background: rgba(255,255,255,0.14);
+    backdrop-filter: blur(18px) saturate(110%);
+  }
 }
 
 /* Kill the old "card" look without breaking layout widths */
@@ -190,7 +197,7 @@ img{max-width:100%; height:auto; display:block}
 
 .panel .card{padding:0 !important; margin:0 !important}
 
-/* Remove the lighter inner rectangles (your note blocks) */
+/* Remove the lighter inner rectangles (note blocks, list notes) */
 .panel .note,
 .panel ul.note{
   background:transparent !important;
@@ -256,11 +263,11 @@ img{max-width:100%; height:auto; display:block}
   max-width:440px;
   width:100%;
   margin:0 0 18px;
-  border:1px solid rgba(183, 176, 166, 0.85); /* stone outline */
+  border:1px solid rgba(183, 176, 166, 0.75); /* stone outline */
   border-radius:18px;
   padding:12px;
-  background:rgba(255,255,255,0.12);
-  backdrop-filter: blur(14px) saturate(120%);
+  background:rgba(255,255,255,0.10);
+  backdrop-filter: blur(18px) saturate(115%);
 }
 
 .hero-logo img{
@@ -287,14 +294,14 @@ img{max-width:100%; height:auto; display:block}
   border-radius:14px;
   font-size:14px;
   border:1px solid rgba(83, 62, 45, 0.16);
-  background:rgba(255,255,255,0.26);
+  background:rgba(255,255,255,0.22);
   font-family:var(--serif);
   letter-spacing:0.06em;
   transition: transform 140ms ease, filter 140ms ease, background 140ms ease;
 }
 
 .btn:hover{
-  background:rgba(255,255,255,0.34);
+  background:rgba(255,255,255,0.30);
   transform: translateY(-1px);
   filter: brightness(1.03) contrast(1.02);
 }
@@ -395,8 +402,8 @@ img{max-width:100%; height:auto; display:block}
   margin-top:14px;
   padding:14px 16px;
   border-radius:14px;
-  border:1px solid rgba(83, 62, 45, 0.14);
-  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(83, 62, 45, 0.12);
+  background:rgba(255,255,255,0.14);
   color:var(--ink-soft);
   line-height:1.6;
   font-size:14px;
@@ -463,9 +470,9 @@ label{
 input, textarea{
   width:100%;
   border-radius:14px;
-  border:1px solid rgba(83, 62, 45, 0.14);
+  border:1px solid rgba(83, 62, 45, 0.12);
   padding:12px 12px;
-  background:rgba(255,255,255,0.26);
+  background:rgba(255,255,255,0.20);
   color:var(--ink);
   font-family:var(--sans);
   font-size:14px;
@@ -487,9 +494,9 @@ textarea{min-height:140px; resize:vertical}
 }
 
 .site-footer{
-  border-top:1px solid rgba(83, 62, 45, 0.14);
-  background:rgba(246, 239, 232, 0.58);
-  backdrop-filter: blur(14px) saturate(120%);
+  border-top:1px solid rgba(83, 62, 45, 0.12);
+  background:rgba(246, 239, 232, 0.52);
+  backdrop-filter: blur(14px) saturate(115%);
   padding:18px 0 34px;
 }
 
@@ -579,5 +586,12 @@ button, .btn, .nav a, .footer-links a { font-weight: 700; }
 .site-header .btn-img img,
 .site-header .nav a,
 .site-header .nav .cta.cta-img img{
-  /* no changes */
+  /* intentionally empty */
+}
+
+/* FINAL PANEL FLATTENING (prevents inner "card" ghosts) */
+.panel > *{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
