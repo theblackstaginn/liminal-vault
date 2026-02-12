@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,7 +29,11 @@
         <a href="services.html">Services</a>
         <a href="process.html">Process</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="cta">Request Consultation</a>
+
+        <!-- PNG CTA -->
+        <a href="contact.html" class="cta cta-img" aria-label="Request Consultation">
+          <img src="lvs-btns/req-consult.png" alt="Request Consultation" />
+        </a>
       </nav>
     </div>
   </header>
@@ -42,11 +47,13 @@
 
           <!-- LEFT: LOGO + COPY -->
           <div>
-            <img
-              src="assets/lvs-logo.png"
-              alt="Liminal Vault Studio"
-              style="max-width:380px;width:100%;margin-bottom:18px"
-            />
+            <!-- Larger hero logo, but constrained so it stays clean -->
+            <div class="hero-logo">
+              <img
+                src="assets/lvs-logo.png"
+                alt="Liminal Vault Studio"
+              />
+            </div>
 
             <p class="kicker">Inset Architectural Relief</p>
 
@@ -61,10 +68,19 @@
               designed to feel discovered rather than applied.
             </p>
 
-            <div class="hero-actions">
-              <a class="btn primary" href="contact.html">Request a Consultation</a>
-              <a class="btn" href="work.html">View Installed Work</a>
-              <a class="btn ghost" href="process.html">See the Process</a>
+            <!-- PNG button row -->
+            <div class="btn-row" aria-label="Primary actions">
+              <a class="btn-img" href="contact.html" aria-label="Request a Consultation">
+                <img src="lvs-btns/req-consult.png" alt="Request a Consultation" />
+              </a>
+
+              <a class="btn-img" href="work.html" aria-label="View Installed Work">
+                <img src="lvs-btns/view-installed-work.png" alt="View Installed Work" />
+              </a>
+
+              <a class="btn-img" href="process.html" aria-label="See the Process">
+                <img src="lvs-btns/see-process.png" alt="See the Process" />
+              </a>
             </div>
 
             <p class="lead" style="margin-top:14px">
@@ -91,30 +107,35 @@
           Each piece is custom measured, fabricated in the studio, and installed in a single controlled operation.
         </p>
 
-        <p style="margin-top:14px">
-          <strong>Inset Relief:</strong> Pre-fabricated relief seated into a measured wall opening and finished to integrate with the surrounding surface.
-        </p>
-        <p>
-          <strong>Sculptural Installations:</strong> Larger works designed for interiors where scale and spatial presence are central. Built in sections when needed.
-        </p>
-        <p>
-          <strong>Relief Panels:</strong> Smaller works for clients seeking the language of inset relief without a full custom build.
-        </p>
+        <!-- Cards removed: using a note block instead -->
+        <div class="note" style="margin-top:14px">
+          <p style="margin:0 0 10px">
+            <strong>Inset Relief:</strong> Pre-fabricated relief seated into a measured wall opening and finished to integrate with the surrounding surface.
+          </p>
+          <p style="margin:0 0 10px">
+            <strong>Sculptural Installations:</strong> Larger works designed for interiors where scale and spatial presence are central. Built in sections when needed.
+          </p>
+          <p style="margin:0">
+            <strong>Relief Panels:</strong> Smaller works for clients seeking the language of inset relief without a full custom build.
+          </p>
+        </div>
       </section>
 
       <!-- HOW IT WORKS -->
       <section class="panel section">
         <h2>How It Works</h2>
 
-        <p style="margin-top:14px">
-          <strong>1. Site Visit:</strong> Measure, photograph, and understand the space, light, and wall conditions.
-        </p>
-        <p>
-          <strong>2. Studio Fabrication:</strong> All sculptural work is fabricated off-site under controlled conditions for precision and consistency.
-        </p>
-        <p>
-          <strong>3. Installation:</strong> A measured drywall section is removed, the completed relief is seated, secured, sealed, and finished for seamless integration.
-        </p>
+        <div class="note" style="margin-top:14px">
+          <p style="margin:0 0 10px">
+            <strong>1. Site Visit:</strong> Measure, photograph, and understand the space, light, and wall conditions.
+          </p>
+          <p style="margin:0 0 10px">
+            <strong>2. Studio Fabrication:</strong> All sculptural work is fabricated off-site under controlled conditions for precision and consistency.
+          </p>
+          <p style="margin:0">
+            <strong>3. Installation:</strong> A measured drywall section is removed, the completed relief is seated, secured, sealed, and finished for seamless integration.
+          </p>
+        </div>
 
         <p class="lead" style="margin-top:14px">
           No on-site sculpting, carving, or heavy material work is performed inside the home.
