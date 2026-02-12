@@ -407,3 +407,34 @@ textarea{min-height:140px; resize:vertical}
   background:rgba(255,255,255,0.40);
   color:var(--ink);
 }
+/* GLOBAL TEXT WEIGHT PATCH */
+
+body {
+  font-weight: 700;
+}
+
+/* Ensure all paragraphs, lists, labels, etc. inherit bold */
+p,
+li,
+span,
+label,
+input,
+textarea,
+small {
+  font-weight: 700;
+}
+
+/* Buttons and nav links */
+button,
+.btn,
+.nav a,
+.footer-links a {
+  font-weight: 700;
+}
+
+/* Headings stay bold but not heavier than intended */
+.h1,
+.section h2,
+.brand .title strong {
+  font-weight: 700;
+}
